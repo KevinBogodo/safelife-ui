@@ -17,13 +17,15 @@ export default function PageTitle({title, className, add, action}: Props) {
           { title }
       </h1>
       {add ?
-        <Button variant={'secondary'}>
+        <Button 
+          variant={'secondary'}
+          onClick={() => action()}
+        >
           <CirclePlus />
           Ajouter
         </Button>
         : null
       }
-
     </div>
   )
 }

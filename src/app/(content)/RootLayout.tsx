@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   const isDesktop = useMediaQuery("(min-width: 768px)")
   const [{ y }, api] = useSpring(() => ({ y: 100 }));
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const bind = useDrag(({ down, movement: [, my], cancel }) => {
     if (my < -10) {

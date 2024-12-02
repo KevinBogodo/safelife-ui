@@ -39,22 +39,22 @@ export function DataTable<TData, TValue>({
         <div className="rounded-md border">
             <Table>
                 <TableHeader>
-                {table.getHeaderGroups().map((headerGroup) => (
-                    <TableRow key={headerGroup.id}>
-                    {headerGroup.headers.map((header) => {
-                        return (
-                        <TableHead key={header.id}>
-                            {header.isPlaceholder
-                            ? null
-                            : flexRender(
-                                header.column.columnDef.header,
-                                header.getContext()
-                                )}
-                        </TableHead>
-                        )
-                    })}
-                    </TableRow>
-                ))}
+                  {table.getHeaderGroups().map((headerGroup) => (
+                      <TableRow key={headerGroup.id}>
+                      {headerGroup.headers.map((header, index) => {
+                          return (
+                          <TableHead key={header.id} className={index === headerGroup.headers.length - 1 ? " pr-5 text-end": ""}>
+                              {header.isPlaceholder
+                              ? null
+                              : flexRender(
+                                  header.column.columnDef.header,
+                                  header.getContext()
+                                  )}
+                          </TableHead>
+                          )
+                      })}
+                      </TableRow>
+                  ))}
                 </TableHeader>
                 <TableBody>
                 {table.getRowModel().rows?.length ? (
@@ -64,7 +64,7 @@ export function DataTable<TData, TValue>({
                         data-state={row.getIsSelected() && "selected"}
                     >
                         {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id}>
+                        <TableCell key={cell.id} >
                             {flexRender(cell.column.columnDef.cell, cell.getContext())}
                         </TableCell>
                         ))}
