@@ -51,7 +51,7 @@ export default function SideNavBar ({isOpen}: Props) {
                 {
                   title: "Dashboard",
                   icon: LayoutDashboard,
-                  href: "/",
+                  href: "/home",
                   variant: "default",
                 },
                 {
@@ -90,7 +90,7 @@ export default function SideNavBar ({isOpen}: Props) {
                 {
                   title: "Dashboard",
                   icon: LayoutDashboard,
-                  href: "/",
+                  href: "/home",
                   variant: "default",
                 },
                 {

@@ -1,0 +1,6 @@
+export const POST_LOGIN = "auth/login"
+export const POST_LOGOUT = "auth/logout"
+export const GET_REFRESH = "auth/refresh"
+export const FOLDER_ENDPOINT = "folders"
+export const USERS_ENDPOINT = "users"
+export const ROLE_ENDPOINT = "roles"
